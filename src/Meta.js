@@ -27,7 +27,7 @@ class Meta {
      * @constructor
      */
     constructor(){
-        this.clear();
+        this[map] = new WeakMap();
     }
 
     /**
@@ -257,22 +257,6 @@ class Meta {
      */
     forget(target){
         return this.delete(target);
-    }
-
-    /**
-     * Clear all meta data
-     */
-    clear(){
-        this[map] = new WeakMap();
-    }
-
-    /**
-     * Alias for clear
-     *
-     * @see Meta.clear()
-     */
-    forgetAll(){
-        this.clear();
     }
 
     /**
