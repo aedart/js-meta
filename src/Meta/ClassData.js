@@ -1,23 +1,18 @@
 'use strict';
 
 import Data from './Data';
-import dependenciesAware from './../Mixins/dependenciesAware';
-
-// /**
-//  * Dependencies symbol
-//  *
-//  * @type {Symbol}
-//  * @private
-//  */
-// const _dependencies = Symbol('meta-data-dependencies');
+import { mix } from 'mixwith/src/mixwith';
+import DependenciesAware from './../Mixins/DependenciesAware';
 
 /**
  * @class Meta Class Data
  *
  * @description Holds arbitrary data about a given class
  *
+ * @extends Data
+ *
  * @author Alin Eugen Deac <aedart@gmail.com>
  */
-export default class ClassData extends dependenciesAware(Data) {
+export default class ClassData extends mix(Data).with(DependenciesAware) {
 
 }

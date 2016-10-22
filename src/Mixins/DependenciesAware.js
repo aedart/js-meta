@@ -1,5 +1,7 @@
 'use strict';
 
+import { Mixin } from 'mixwith/src/mixwith';
+
 /**
  * Dependencies symbol
  *
@@ -15,7 +17,7 @@ const _dependencies = Symbol('meta-data-dependencies');
  *
  * @returns {DependenciesAware}
  */
-export default function(superClass){
+export default Mixin(function(superClass){
 
     /**
      * @class DependenciesAware
@@ -49,4 +51,4 @@ export default function(superClass){
             return this.data[_dependencies];
         }
     }
-};
+});
