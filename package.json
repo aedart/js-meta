@@ -12,7 +12,7 @@
   },
   "keywords": [
     "Meta",
-    "Reflection",
+    "Meta data",
     "Arbitrary"
   ],
   "author": "Alin Eugen Deac <aedart@gmail.com> (https://github.com/aedart)",
@@ -39,6 +39,6 @@
     "uglify-js-harmony": "^2.6.2"
   },
   "dependencies": {
-
+    "mixwith": "~0.1"
   }
 }
