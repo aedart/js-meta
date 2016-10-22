@@ -32,7 +32,7 @@ export default class Data {
      * @constructor
      *
      * @param {Function|Object} target
-     * @param {*} [data]
+     * @param {Object} [data] Key value pairs
      *
      * @throws {InvalidTarget}
      */
@@ -58,7 +58,7 @@ export default class Data {
     /**
      * Set arbitrary data
      *
-     * @param {*} value
+     * @param {Object} value Key value pairs
      */
     set data(value){
         this[_data] = value;
@@ -69,7 +69,7 @@ export default class Data {
     /**
      * Get arbitrary data
      *
-     * @returns {*}
+     * @returns {Object}
      */
     get data(){
         return this[_data];
