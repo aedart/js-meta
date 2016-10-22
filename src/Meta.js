@@ -135,7 +135,7 @@ class Meta {
      *
      * @returns {boolean}
      */
-    isClass(target){
+    hasClass(target){
         if( ! this.has(target)){
             return false;
         }
@@ -203,7 +203,7 @@ class Meta {
      *
      * @returns {boolean}
      */
-    isMethod(target){
+    hasMethod(target){
         if( ! this.has(target)){
             return false;
         }
