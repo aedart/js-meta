@@ -34,7 +34,7 @@ Meta.addClass(MyClass, {
 });
 
 // Obtain arbitrary data about MyClass
-let metaData = Meta.get(MyClass); // Returns "ClassData" object
+let metaData = Meta.get(MyClass); // Returns "@aedart/js-meta/src/Meta/ClassData" object
 
 console.log(metaData.data);
 // Outputs:
