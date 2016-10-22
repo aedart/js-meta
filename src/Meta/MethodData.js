@@ -14,5 +14,16 @@ import DependenciesAware from './../Mixins/DependenciesAware';
  * @author Alin Eugen Deac <aedart@gmail.com>
  */
 export default class MethodData extends mix(Data).with(DependenciesAware) {
-
+    
+    /**
+     * @constructor
+     *
+     * @param {Function|Object} target
+     * @param {Object} [data] Key value pairs
+     *
+     * @throws {InvalidTarget}
+     */
+    constructor(target, data = {}){
+        super(target, data);
+    }
 }

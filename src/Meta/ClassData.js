@@ -15,4 +15,15 @@ import DependenciesAware from './../Mixins/DependenciesAware';
  */
 export default class ClassData extends mix(Data).with(DependenciesAware) {
 
+    /**
+     * @constructor
+     *
+     * @param {Function|Object} target
+     * @param {Object} [data] Key value pairs
+     *
+     * @throws {InvalidTarget}
+     */
+    constructor(target, data = {}){
+        super(target, data);
+    }
 }
