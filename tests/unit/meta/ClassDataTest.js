@@ -12,11 +12,11 @@ describe("Meta Class Data", function(){
             b: false
         };
 
-        let metaData = new ClassData(target, data);
+        let metaClassData = new ClassData(target, data);
 
-        expect(metaData).toBeTruthy();
-        expect(metaData.target).toBe(target);
-        expect(metaData.data).toBe(data);
+        expect(metaClassData).toBeTruthy();
+        expect(metaClassData.target).toBe(target);
+        expect(metaClassData.data).toBe(data);
     });
 
     it("has no dependencies by default", function(){
@@ -26,11 +26,11 @@ describe("Meta Class Data", function(){
             b: false
         };
 
-        let metaData = new ClassData(target, data);
+        let metaClassData = new ClassData(target, data);
 
-        console.log('default dependencies', metaData.dependencies);
+        console.log('default dependencies', metaClassData.dependencies);
 
-        expect(metaData.dependencies.length).toBe(0);
+        expect(metaClassData.dependencies.length).toBe(0);
     });
 
     it("can set and get dependencies data", function(){
@@ -42,12 +42,12 @@ describe("Meta Class Data", function(){
 
         let dependencies = ['a', 'b', 'c'];
 
-        let metaData = new ClassData(target, data);
-        metaData.dependencies = dependencies;
+        let metaClassData = new ClassData(target, data);
+        metaClassData.dependencies = dependencies;
 
-        console.log('dependencies', metaData.dependencies);
+        console.log('dependencies', metaClassData.dependencies);
 
-        expect(metaData.dependencies).toBe(dependencies);
+        expect(metaClassData.dependencies).toBe(dependencies);
     });
 
 });
