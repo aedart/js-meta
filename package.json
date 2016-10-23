@@ -1,6 +1,6 @@
 {
   "name": "@aedart/js-meta",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Stores meta data of various kinds about given target classes or methods",
   "main": "index.js",
   "scripts": {
