@@ -276,7 +276,11 @@ class Meta {
     }
 }
 
-// Singleton
+/**
+ * Meta Container
+ * 
+ * @type {Meta}
+ */
 const instance = new Meta();
 Object.freeze(instance);
 
