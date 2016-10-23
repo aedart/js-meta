@@ -276,11 +276,6 @@ class Meta {
     }
 }
 
-/**
- * Meta Container
- * 
- * @type {Meta}
- */
 const instance = new Meta();
 Object.freeze(instance);
 
