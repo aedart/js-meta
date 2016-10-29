@@ -51,7 +51,7 @@ class Meta {
 
         // Fail if invalid data
         if(! (data instanceof Data)){
-            throw new InvalidData()
+            throw new InvalidData();
         }
 
         this[map].set(target, data);
@@ -271,7 +271,7 @@ class Meta {
      */
     _assertTargetDoesNotExist(target){
         if(this.has(target)){
-            throw new MetaError('Target already has meta defined')
+            throw new MetaError('Target already has meta defined');
         }
     }
 }

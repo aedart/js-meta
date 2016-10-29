@@ -50,5 +50,5 @@ export default Mixin(function(superClass){
 
             return this.data[_dependencies];
         }
-    }
+    };
 });
