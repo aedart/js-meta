@@ -1,54 +1,58 @@
 'use strict';
 
-import { Mixin } from 'mixwith/src/mixwith';
+import {DeclareMixin} from '@vcas/js-mixin';
 
 /**
- * Dependencies symbol
+ * dependencies symbol
  *
  * @type {Symbol}
  * @private
  */
-const _dependencies = Symbol('meta-data-dependencies');
+const _dependencies = Symbol('dependencies');
 
 /**
- * dependencies Aware mixin
+ * Dependencies Aware Mixin
  *
- * @param {Function} superClass
- *
- * @returns {DependenciesAware}
+ * @return {DependenciesAware}
  */
-export default Mixin(function(superClass){
+export default DeclareMixin((superClass) => class DependenciesAware extends superClass {
 
     /**
-     * @class DependenciesAware
+     * Set dependencies
      *
-     * @description Class is aware of one or multiple dependencies.
-     *
-     * @author Alin Eugen Deac <aedart@gmail.com>
+     * @param {Array.<*>|null} dependencies Various component dependencies
      */
-    return class DependenciesAware extends superClass {
-        /**
-         * Set data about target's dependencies
-         *
-         * @param {Array<*>} dependencies
-         */
-        set dependencies(dependencies){
-            this.data[_dependencies] = dependencies;
+    set dependencies(dependencies) {
+        this[_dependencies] = dependencies;
+    }
 
-            return this;
+    /**
+     * Get dependencies
+     *
+     * @return {Array.<*>|null} Various component dependencies
+     */
+    get dependencies() {
+        if (!this.hasDependencies()) {
+            this.dependencies = this.defaultDependencies;
         }
+        return this[_dependencies];
+    }
 
-        /**
-         * Get data about target's dependencies
-         *
-         * @returns {Array<*>}
-         */
-        get dependencies(){
-            if(!this.data.hasOwnProperty(_dependencies)){
-                this.dependencies = [];
-            }
+    /**
+     * Check if "dependencies" has been set
+     *
+     * @return {boolean}
+     */
+    hasDependencies() {
+        return (this[_dependencies] !== undefined && this[_dependencies] !== null);
+    }
 
-            return this.data[_dependencies];
-        }
-    };
+    /**
+     * Get a default "dependencies"
+     *
+     * @return {Array.<*>|null} A default "dependencies" value or null if none is available
+     */
+    get defaultDependencies() {
+        return [];
+    }
 });
