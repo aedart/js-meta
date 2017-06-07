@@ -1,6 +1,6 @@
 'use strict';
 
-import {DeclareMixin} from '@vcas/js-mixin';
+import {DeclareMixin} from '@vestergaard-company/js-mixin';
 
 /**
  * dependencies symbol

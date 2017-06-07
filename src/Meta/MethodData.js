@@ -1,7 +1,7 @@
 'use strict';
 
 import Data from './Data';
-import mix from '@vcas/js-mixin';
+import mix from '@vestergaard-company/js-mixin';
 import DependenciesAware from './../Mixins/DependenciesAware';
 
 /**
