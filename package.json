@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/aedart/js-meta#readme",
   "dependencies": {
-    "@vcas/js-mixin": "~1.0"
+    "@vestergaard-company/js-mixin": "^1.0.3"
   },
   "devDependencies": {
     "babel-plugin-external-helpers": "^6.18.0",
