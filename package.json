@@ -32,7 +32,6 @@
     "karma-firefox-launcher": "^1.0.0",
     "karma-ie-launcher": "^1.0.0",
     "karma-jasmine": "^1.0.2",
-    "karma-phantomjs-launcher": "^1.0.2",
     "karma-rollup-plugin": "^0.2.4",
     "karma-spec-reporter": "0.0.26",
     "rollup": "^0.36.3",

@@ -85,12 +85,6 @@ module.exports = function (config) {
             }
         },
 
-        // TODO: Phantom JS 2 does not fully support es6!
-        phantomjsLauncher: {
-            // Have phantomjs exit if a ResourceError is encountered (useful if karma exits without killing phantom)
-            exitOnResourceError: true
-        },
-
         // Rollup preprocessor settings
         rollupPreprocessor: {
             // rollup settings. See Rollup documentation
